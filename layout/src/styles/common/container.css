@@ -1,0 +1,21 @@
+.container {
+    position: relative;
+    width: 341px;
+    margin: 27px 16px 8px 16px;
+    border: 0.3px solid #828282;
+    border-radius: 16px;
+    align-self: center;
+  }
+  
+  
+  @media (min-width: 1440px) {
+    .container {
+      width: fit-content;
+      max-width: 1200px;
+      margin: 50px auto 10px 150px;
+    }
+
+    body:last-child {
+      margin-bottom: 100px;
+    }
+  }

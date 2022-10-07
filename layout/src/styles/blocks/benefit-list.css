@@ -1,0 +1,28 @@
+.benefit-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding-left: 50px;
+}
+
+.benefit-list__item {
+    color: #4B4B4B;
+    position: relative;
+}
+
+.benefit-list__item::before {
+    position: absolute;
+    content: url(../../images/check-mark.svg);
+    height: 16px;
+    width: 16px;
+    left: -35px;
+}
+
+@media (min-width: 1440px) {
+    .benefit-list__item {
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 20px;
+    }
+}

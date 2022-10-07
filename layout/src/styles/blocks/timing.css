@@ -1,0 +1,23 @@
+.timing {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 20px;
+
+    color: #9E9E9E;
+    position: relative;
+}
+
+.timing::before {
+    position: absolute;
+    content: url(../../images/clock-circular-outline.svg);
+    height: 16px;
+    right: 45px;
+    top: 1px;
+}
+
+@media (min-width: 1440px) {
+    .timing {
+        font-size: 14px;
+        line-height: 20px;
+    }
+}

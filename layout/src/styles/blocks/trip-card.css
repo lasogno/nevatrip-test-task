@@ -1,0 +1,203 @@
+.trip-card {
+    display: flex;
+    justify-content: center;
+}
+
+.trip-card__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.trip-card__label {
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 22px;
+}
+
+.trip-card__image--peterburg {
+    background-image: url('../../images/peterburg-mobile.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    min-height: 220px;
+    min-width: 341px;
+    width: 100%;
+    border-radius: 16px 16px 0 0;
+}
+
+.trip-card__image--peterburg-larger {
+    background-image: url('../../images/peterburg-mobile.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 284px;
+    width: 341px;
+    width: 100%;
+    border-radius: 16px 16px 0 0;
+}
+
+.trip-card__image--bridge {
+    width: 473px;
+    height: 369px;
+    background-image: url('../../images/bridge.jpg');
+}
+
+.trip-card__image--peterburg-desktop {
+    width: 473px;
+    height: 369px;
+    background-image: url('../../images/peterburg-desktop.jpg');
+}
+
+.trip-card__image--music {
+    width: 473px;
+    height: 369px;
+    background-image: url('../../images/music.jpg');
+}
+
+.trip-card__image--desktop {
+    border-radius: 16px 0px 0px 16px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.trip-card__badge {
+    position: absolute;
+    margin: 0;
+    top: 40px;
+    left: 0;
+}
+
+.trip-card__badge--top-left {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.trip-card__badge--top-center {
+    top: 60px;
+    left: 0;
+}
+
+.trip-card__timing {
+    margin: 14px auto 10px 37px;
+}
+
+.trip-card__label {
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 22px;
+    color: #404040;
+    margin: 0 12px;
+}
+
+.trip-card__list {
+    margin-top: 20px;
+}
+
+.trip-card__buttons {
+    margin-top: 10px;
+}
+
+.trip-card__footer {
+    width: 100%;
+    padding: 20px 19px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.trip-card__sum {
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 20px;
+
+    margin: 0;
+
+    color: #000000;
+}
+
+.trip-card__pier-sum {
+    margin: 0;
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 20px;
+
+
+    color: #000000;
+}
+
+.trip-card__pier-sum--small {
+    line-height: 11px;
+    padding-top: 10px;
+}
+
+@media (min-width: 1440px) {
+    .trip-card__wrapper {
+        display: grid;
+        column-gap: 10px;
+        grid-template-columns: 472px 1fr;
+        grid-template-areas: "image label"
+            "image timing"
+            "image benefit-list"
+            "image footer";
+    }
+
+    .trip-card__footer {
+        grid-area: footer;
+    }
+
+    .trip-card__label {
+        grid-area: label;
+        font-weight: 400;
+        font-size: 26px;
+        line-height: 34px;
+
+        color: #000000;
+        padding-top: 10px;
+        width: 557px;
+    }
+
+    .trip-card__timing {
+        grid-area: timing;
+    }
+
+    .trip-card__list {
+        grid-area: benefit-list;
+        margin-bottom: 0;
+        margin-top: 0;
+        margin-right: 30px;
+    }
+
+    .trip-card__image--desktop {
+        grid-area: image;
+    }
+
+    .trip-card__timing {
+        margin: 0 auto 0 37px;
+    }
+
+    .trip-card__buttons {
+        display: inline;
+        padding: 10px;
+    }
+
+    .trip-card__footer {
+        justify-content: flex-start;
+        gap: 15px;
+    }
+
+    .trip-card__sum {
+        font-size: 36px;
+        line-height: 20px;
+    }
+
+    .trip-card__pier-sum {
+        padding-top: 10px;
+        font-size: 14px;
+    }
+
+}

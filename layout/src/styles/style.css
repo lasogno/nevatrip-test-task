@@ -1,0 +1,10 @@
+@import './common/visually-hidden.css';
+@import './common/fonts.css';
+@import './common/global.css';
+@import './common/container.css';
+@import './blocks/trip-card.css';
+@import './blocks/badge.css';
+@import './blocks/timing.css';
+@import './blocks/benefit-list.css';
+@import './blocks/time-button.css';
+@import './blocks/info-button.css';

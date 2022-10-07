@@ -1,0 +1,11 @@
+@font-face {
+    font-weight: 400;
+    font-family: 'Open Sans';
+    src: url('/layout/src/assets/fonts/OpenSans-Regular.woff2') format('woff-2');
+}
+
+@font-face {
+    font-weight: 600;
+    font-family: 'Open Sans';
+    src: url('/layout/src/assets/fonts/OpenSans-SemiBold.woff2') format('woff-2');
+}
