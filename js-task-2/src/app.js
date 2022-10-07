@@ -1,25 +1,26 @@
 import renderSum from './renderSum.js';
 import renderTime from './renderTime.js';
 import renderResult from './renderResult.js';
+import renderBack from './renderBack.js';
 
 export default () => {
   const state = {
     there: [
-      '2021-08-21 18:00:00',
-      '2021-08-21 18:30:00',
-      '2021-08-21 18:45:00',
-      '2021-08-21 19:00:00',
-      '2021-08-21 19:15:00',
-      '2021-08-21 21:00:00',
+      '2021-08-21 18:00:00 UTC+3',
+      '2021-08-21 18:30:00 UTC+3',
+      '2021-08-21 18:45:00 UTC+3',
+      '2021-08-21 19:00:00 UTC+3',
+      '2021-08-21 19:15:00 UTC+3',
+      '2021-08-21 21:00:00 UTC+3',
     ],
     back: [
-      '2021-08-21 18:30:00',
-      '2021-08-21 18:45:00',
-      '2021-08-21 19:00:00',
-      '2021-08-21 19:15:00',
-      '2021-08-21 19:35:00',
-      '2021-08-21 21:50:00',
-      '2021-08-21 21:55:00',
+      '2021-08-21 18:30:00 UTC+3',
+      '2021-08-21 18:45:00 UTC+3',
+      '2021-08-21 19:00:00 UTC+3',
+      '2021-08-21 19:15:00 UTC+3',
+      '2021-08-21 19:35:00 UTC+3',
+      '2021-08-21 21:50:00 UTC+3',
+      '2021-08-21 21:55:00 UTC+3',
     ],
     currentRoute: '',
     currentTime: '',
@@ -37,11 +38,10 @@ export default () => {
       state.currentTime = e.target.value;
       if (state.thereAndBack) {
         state.status = 'rendering back-time';
-        render();
       } else {
         state.status = 'rendering quantity';
-        render();
       }
+      render()
     });
   };
 
@@ -49,7 +49,6 @@ export default () => {
     const timeSelect = document.querySelector('.time-select-back');
     timeSelect.addEventListener('change', (e) => {
       state.backTime = e.target.value;
-      console.log(state.backTime);
       state.status = 'rendering quantity';
       render();
     });
@@ -81,7 +80,7 @@ export default () => {
         timeControl();
         break;
       case 'rendering back-time':
-        renderTime(state);
+        renderBack(state);
         backTimeControl();
         break;
       case 'rendering quantity':
@@ -99,11 +98,10 @@ export default () => {
   const selectElement = document.querySelector('.route-select');
   selectElement.addEventListener('change', (e) => {
     state.currentRoute = e.target.value;
-    state.status = 'rendering time';
-    if (e.target.value === 'из A в B и обратно в А') {
-      state.thereAndBack = true;
-    }
+        state.status = 'rendering time';
+        state.thereAndBack = e.target.value === 'из A в B и обратно в А' ? true : false;
     render();
   });
+
   render();
 };
