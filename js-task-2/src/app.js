@@ -41,7 +41,7 @@ export default () => {
       } else {
         state.status = 'rendering quantity';
       }
-      render()
+      render();
     });
   };
 
@@ -66,7 +66,6 @@ export default () => {
       state.duration = duration;
       state.sum = value * ticketCost;
       state.status = 'result';
-      console.log(state);
       render();
     });
   };
@@ -98,8 +97,8 @@ export default () => {
   const selectElement = document.querySelector('.route-select');
   selectElement.addEventListener('change', (e) => {
     state.currentRoute = e.target.value;
-        state.status = 'rendering time';
-        state.thereAndBack = e.target.value === 'из A в B и обратно в А' ? true : false;
+    state.status = 'rendering time';
+    state.thereAndBack = e.target.value === 'из A в B и обратно в А';
     render();
   });
 

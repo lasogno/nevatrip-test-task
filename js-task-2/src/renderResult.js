@@ -1,10 +1,10 @@
 import add from 'date-fns/add';
 import ru from 'date-fns/locale/ru';
-import differenceInMinutes from 'date-fns/differenceInMinutes'
+import differenceInMinutes from 'date-fns/differenceInMinutes';
 
 export default (state) => {
   const container = document.createElement('div');
-  container.classList.add('alert', 'alert-primary');
+  container.classList.add('alert', 'alert-info', 'shadow');
   container.classList.add('col');
   document.querySelector('.result').replaceChildren(container);
 

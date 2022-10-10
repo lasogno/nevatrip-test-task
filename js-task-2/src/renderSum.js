@@ -26,7 +26,7 @@ export default () => {
   wrapper.append(input);
 
   const button = document.createElement('button');
-  button.classList.add('btn', 'btn-primary');
+  button.classList.add('btn', 'btn-primary', 'submit-button');
   button.type = 'submit';
   button.textContent = 'Посчитать';
   form.append(button);

@@ -13,6 +13,7 @@ const renderThereorBack = (time) => {
     option.textContent = time;
     option.value = date;
     select.append(option);
+    return option;
   });
 };
 
@@ -21,15 +22,18 @@ const renderTime = (state) => {
     case 'из A в B':
       renderThereorBack(state.there);
       state.backTime = '';
-      document.querySelector('.back-time').replaceChildren('')
+      document.querySelector('.back-time').setAttribute('style', 'display: none;')
+      document.querySelector('.back-time').replaceChildren('');
       break;
     case 'из B в A':
       renderThereorBack(state.back);
       state.backTime = '';
-      document.querySelector('.back-time').replaceChildren('')
+      document.querySelector('.back-time').replaceChildren('');
+      document.querySelector('.back-time').setAttribute('style', 'display: block;')
       break;
     case 'из A в B и обратно в А':
       renderThereorBack(state.there);
+      document.querySelector('.back-time').setAttribute('style', 'display: block;')
       break;
     default:
       throw new Error('Unknown route!');
